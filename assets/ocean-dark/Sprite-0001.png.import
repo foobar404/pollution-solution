@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_main-character.png-8a03fd6a6805d39370e453e8dacaf5d3.stex"
+path="res://.import/Sprite-0001.png-a5b67c9b6168589662d660673000994b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/_main-character.png"
-dest_files=[ "res://.import/_main-character.png-8a03fd6a6805d39370e453e8dacaf5d3.stex" ]
+source_file="res://assets/ocean-dark/Sprite-0001.png"
+dest_files=[ "res://.import/Sprite-0001.png-a5b67c9b6168589662d660673000994b.stex" ]
 
 [params]
 

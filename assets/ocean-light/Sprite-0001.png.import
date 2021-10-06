@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_fishing poles.png-3fb6c4034747c9c2d997974c7699133a.stex"
+path="res://.import/Sprite-0001.png-42c491bfb87388200dc8bc54f9da15f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/_fishing poles.png"
-dest_files=[ "res://.import/_fishing poles.png-3fb6c4034747c9c2d997974c7699133a.stex" ]
+source_file="res://assets/ocean-light/Sprite-0001.png"
+dest_files=[ "res://.import/Sprite-0001.png-42c491bfb87388200dc8bc54f9da15f5.stex" ]
 
 [params]
 
