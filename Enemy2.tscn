@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/_beach-person-2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Enemy2.gd" type="Script" id=2]
+[ext_resource path="res://Trash.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.32201, 3.65833 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 40, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 56, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 24, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "eat",
+"speed": 5.0
+} ]
+
+[node name="Enemy2" type="Area2D" groups=[
+"mobs",
+]]
+script = ExtResource( 2 )
+Trash = ExtResource( 3 )
+
+[node name="Enemy2Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0468216, 0.608686 )
+shape = SubResource( 1 )
+
+[node name="Enemy2Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 10 )
+animation = "walk"
+playing = true
+
+[connection signal="area_entered" from="." to="." method="_on_Enemy2_area_entered"]
