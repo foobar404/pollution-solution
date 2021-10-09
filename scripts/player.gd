@@ -14,6 +14,10 @@ func get_input():
 		owner.add_child(b)
 		b.transform = $PlayerItem.global_transform
 		
+	if Input.is_action_just_pressed("ui_action"):
+		var pew = get_tree().get_root().get_node("Home/Pew")
+		print(pew)
+		pew.play()
 	if Input.is_action_pressed("ui_action"):
 		$Hero.animation = "action"
 		$PlayerItem.animation = player_item

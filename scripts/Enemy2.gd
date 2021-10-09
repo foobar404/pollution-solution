@@ -14,6 +14,7 @@ func _on_Enemy2_area_entered(area):
 		speed = 0
 		_pollution_loop()
 	if area.is_in_group("damage"):
+		$Ouch.play()
 		area.queue_free()
 		speed = -speed
 		Sprite.animation = "dead"
